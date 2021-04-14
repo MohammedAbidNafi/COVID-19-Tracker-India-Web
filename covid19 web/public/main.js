@@ -23,8 +23,8 @@ $(document).ready(function () {
     $.each(data.statewise, function (id, obj) {
       states.push(obj.state);
       confirmed.push(obj.confirmed);
-      active.push(obj.active);
       recovered.push(obj.recovered);
+      active.push(obj.active);
       deaths.push(obj.deaths);
     });
 
@@ -54,16 +54,16 @@ $(document).ready(function () {
             backgroundColor: "#f1c40f",
             minBarLength: 1,
           },
-          {label: "Active",
-           data: active,
-          backgroundColor:"#0A86F2",
-          minBarLength:1
-          },
           {
             label: "Recovered",
             data: recovered,
             backgroundColor: "#2ecc71",
             minBarLength: 1,
+          },
+          {label: "Active",
+           data: active,
+          backgroundColor:"#0A86F2",
+          minBarLength:1
           },
           {
             label: "Deceased",
